@@ -1,0 +1,28 @@
+{
+  "name": "api-maravilhosas",
+  "version": "1.0.0",
+  "description": "projeto II API maravilhosas",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NahLima/API-maravilhosas.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "naiara-lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NahLima/API-maravilhosas/issues"
+  },
+  "homepage": "https://github.com/NahLima/API-maravilhosas#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
