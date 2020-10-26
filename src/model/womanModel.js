@@ -25,15 +25,13 @@ const insertData = (newMaravilhosa) => {
 //updateData
 const updateData = (id, atualizada) => { 
     const maravilhosaId = data.map(maravilhosa => maravilhosa.id)
-    //console.log(maravilhosaId)
-
+   
     const atualizaId = maravilhosaId.indexOf(id)
     if (atualizaId < 0) {
         return "ID não encontrado!"
     }
     const maravilhosaUpdateId  = {id, ...atualizada}
-    //console.log('maravilhosa atualizado com Id', maravilhosaAtualizadacomId)
-    data.splice(atualizaId, 1, maravilhosaUpdateId )
+       data.splice(atualizaId, 1, maravilhosaUpdateId )
 
     const found = data.find(maravilhosa => maravilhosa.id === id)
 

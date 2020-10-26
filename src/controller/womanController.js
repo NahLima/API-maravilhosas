@@ -24,7 +24,7 @@ const getMaravilhosaById = (request, response) => {
 
 //addMaravilhosa 
 const addMaravilhosa = (request, response) => {
-    //const { id, name, photo, subtitle, about, phrase, history, addedBy} = request.body
+    
     const newMaravilhosa = request.body
     const novaMaravilhosa = {
         id: helper.newId(selectMaravilhosas),
@@ -56,9 +56,8 @@ const updateMaravilhosa = (request, response) => {
     console.log('body', atualizada)
     const id = parseInt(request.params.id)
     const atualizacaoFeita = models.updateData(id, atualizada)
-
     response.status(200).send(atualizacaoFeita)
-    //response.status(200).send(selectAllData.find(maravilhosa => maravilhosa.id === id))
+   
 }
 
 //deleteMaravilhosa
@@ -66,7 +65,6 @@ const deleteMaravilhosa = (request, response) => {
     const id = request.params.id
     const encontrarId = models.selectById(id)
     if(models.deleteData(encontrarId)) {
-        //const dataComExluido = models.deleteData(encontrarId)
         response.status(200).send(selectMaravilhosas)
     }else{
         response.status(404).send("ID não encontrado para efetuar a exclusão!")
